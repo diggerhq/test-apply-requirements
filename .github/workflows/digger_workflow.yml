@@ -1,3 +1,4 @@
+
 name: Digger Workflow
 
 on:
@@ -32,7 +33,7 @@ jobs:
           api-key: ${{ secrets.INFRACOST_API_KEY }}      
 
       - name: digger
-        uses: diggerhq/digger@vLatest
+        uses: diggerhq/digger@feat/local-dev-support
         with:
           digger-spec: ${{ inputs.spec }}
           digger-private-key: ${{ secrets.DIGGER_PRIVATE_KEY }}
@@ -40,6 +41,8 @@ jobs:
           disable-locking: true
           setup-opentofu: true
           setup-terraform: true
+          local-dev-mode: true
+          local-dev-cli-path: /Users/mohamedsayed/dev/digger/digger/cli
         env:
           GITHUB_CONTEXT: ${{ toJson(github) }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
