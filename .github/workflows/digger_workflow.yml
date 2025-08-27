@@ -37,12 +37,14 @@ jobs:
         with:
           digger-spec: ${{ inputs.spec }}
           digger-private-key: ${{ secrets.DIGGER_PRIVATE_KEY }}
-          setup-aws: false
+          setup-aws: true
           disable-locking: true
           setup-opentofu: true
           setup-terraform: true
           local-dev-mode: true
           local-dev-cli-path: /Users/mohamedsayed/dev/digger/digger/cli
+          cache-dependencies-s3: true
+          cache-dependencies-s3-bucket: s3://terraform-cache-1756318349465/cache
         env:
           GITHUB_CONTEXT: ${{ toJson(github) }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
