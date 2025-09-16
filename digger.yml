@@ -10,7 +10,7 @@ projects:
     apply_requirements: [undiverged]
   - name: prod2
     dir: includeme/
-    apply_requirements: [mergeable]
+
 
   - name: prod11
     dir: prod/
