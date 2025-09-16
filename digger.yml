@@ -8,6 +8,10 @@ projects:
   - name: prod
     dir: prod/
     apply_requirements: [undiverged]
+  - name: prod2
+    dir: includeme/
+    apply_requirements: [mergeable]
+
   - name: prod11
     dir: prod/
   - name: prod12
