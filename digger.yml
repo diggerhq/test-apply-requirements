@@ -7,6 +7,7 @@ projects:
     apply_requirements: [approved]
   - name: prod
     dir: prod/
+    apply_requirements: [undiverged]
   - name: prod11
     dir: prod/
   - name: prod12
