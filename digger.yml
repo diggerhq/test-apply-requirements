@@ -4,7 +4,6 @@ auto_merge_strategy: "merge"
 projects:
   - name: dev
     dir: dev/
-    apply_requirements: [approved]
   - name: prod
     dir: prod/
   - name: prod11
